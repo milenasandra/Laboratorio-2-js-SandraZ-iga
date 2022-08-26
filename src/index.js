@@ -1,14 +1,18 @@
 import './styles.css'
 import { Todo, TodoList }  from './classes/index'
+import {crearTodoHtml} from './js/componentes.js'
 
-const todoList = new TodoList()
+export const todoList = new TodoList()
 
 const tarea = new Todo('Aprender JavaScript')
-const tarea2 = new Todo('Comprar figura de Ironman')
-
 todoList.nuevoTodo(tarea)
-todoList.nuevoTodo(tarea2)
+tarea.completado = false
 
-console.log(todoList);
+console.log(todoList)
+crearTodoHtml(tarea)
+
+
+
+
 
 
